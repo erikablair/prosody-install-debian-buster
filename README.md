@@ -1,2 +1,59 @@
 # prosody_cfg_buster
 Working prosody.cfg.lua with the exception of SRV record -- Debian Buster
+
+### Add prosody repo to apt list, download authentication key, & install prosody
+* This is just one way to accomplish this
+    * sudo apt-add-repository deb https://packages.prosody.im/debian buster main
+* Add Prosody key file
+    * wget https://prosody.im/files/prosody-debian-packages.key -O- | sudo apt-key add -
+* Update apt to synchronize new repositories
+    * sudo apt update
+* Install prosody
+    * sudo apt install prosody
+
+### Dependencies
+* sudo apt install luarocks lua5.2 lua-zlib lua-socket lua-sec\
+ lua-ldap lua-filesystem lua-expat lua-event lua-dbi-sqlite3\
+ lua-dbi-postgresql lua-lib-mysql lua-dbi-common lua-bitop\
+ lua-bit32 mercurial
+
+* luarocks install luaunbound
+
+### Set up Turn Server for Discoverability
+* Install co-Turn
+    * sudo apt install coturn
+
+* Edit coturn config file located at /etc/turnserver.conf
+    * search for "realm", uncomment, and add the following lines
+        * realm=turn.example.com
+        * use-auth-secret
+        * static-auth-secret=supersecretpassword
+
+### Add additional prosody modules
+* Download prosody community modules to a suitable directory
+    * hg clone https://hg.prosody.im/prosody-modules/prosody-modules
+
+* Make a new directory (you may have to login as root depending on permissions)
+    * mkdir /usr/local/lib/prosody/modules-enabled
+
+* Copy mod_mam folder to moduled-enabled dir
+    * cp /usr/lib/prosody/modules /usr/local/lib/prosody/modules-enabled
+
+* Useful community mods to copy to modules-enabled dir
+    * mod_adhoc_groups.lua
+    * mod_auto156.lua
+    * mod_bookmarks.lua
+    * mod_cloud_notify.lua
+    * mod_extdisco.lua
+    * mod_external_services.lua
+    * mod_http_altconnect.lua
+    * mod_http.lua
+    * mod_http_upload_external.lua
+    * mod_mam_adhoc.lua
+    * mod_mam.lua
+    * mod_mam_muc.lua
+    * mod_omemo_all_access.lua
+    * mod_require_otr.lua
+    * mod_smacks.lua
+    * mod_turncredentials.lua
+    * mod_vcard_muc.lua
