@@ -17,9 +17,9 @@ Working prosody.cfg.lua with the exception of SRV record -- Debian Buster
     * `sudo apt install prosody`
 
 ### Dependencies
-* `sudo apt install luarocks lua5.2 lua-zlib lua-socket lua-sec\
- lua-ldap lua-filesystem lua-expat lua-event lua-dbi-sqlite3\
- lua-dbi-postgresql lua-lib-mysql lua-dbi-common lua-bitop\
+* `sudo apt install luarocks lua5.2 lua-zlib lua-socket lua-sec
+ lua-ldap lua-filesystem lua-expat lua-event lua-dbi-sqlite3
+ lua-dbi-postgresql lua-lib-mysql lua-dbi-common lua-bitop
  lua-bit32 mercurial`
 
 * `luarocks install luaunbound`
