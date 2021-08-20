@@ -5,7 +5,7 @@ Working prosody.cfg.lua with the exception of SRV record -- Debian Buster
 
 ### Add prosody repo to apt list, download authentication key, & install prosody
 * This is just one way to accomplish this
-    * sudo apt-add-repository deb https://packages.prosody.im/debian buster main
+    * `<sudo apt-add-repository deb https://packages.prosody.im/debian buster main>`
 * Add Prosody key file
     * wget https://prosody.im/files/prosody-debian-packages.key -O- | sudo apt-key add -
 * Update apt to synchronize new repositories
