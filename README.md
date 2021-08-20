@@ -1,6 +1,9 @@
 # prosody_cfg_buster
 Working prosody.cfg.lua with the exception of SRV record -- Debian Buster
 
+## Be sure to take note of all ports listed in prosody.cfg.lua!  They will\
+## have to be allowed by your firewall and forwarded on your router
+
 ### Add prosody repo to apt list, download authentication key, & install prosody
 * This is just one way to accomplish this
     * sudo apt-add-repository deb https://packages.prosody.im/debian buster main
@@ -57,3 +60,25 @@ Working prosody.cfg.lua with the exception of SRV record -- Debian Buster
     * mod_smacks.lua
     * mod_turncredentials.lua
     * mod_vcard_muc.lua
+
+
+### Install certbot (LetsEncrypt) and generate certs
+##### Instructions from https://certbot.eff.org/lets-encrypt/debianbuster-nginx
+* Install snapd
+    * sudo apt install snapd
+* Log out or Restart to ensure snap path updates correctly, then install core
+    * sudo snap install core; sudo snap refresh core
+* Install certbot
+    * sudo snap install --classic certbot
+* Link directories
+    * sudo ln -s /snap/bin/certbot /usr/bin/certbot
+* Create prosody web root dir
+    * sudo mkdir /var/www/prosody/
+* Set www-data (nginx user) as owner of web root dir
+    * sudo chown www-data:www-data /var/www/prosody -R
+* Reload nginx
+    * sudo systemctl reload nginx
+* Generate TLS certificte
+    * sudo certbot --nginx --agree-tos --redirect --hsts --staple-ocsp --email you@example.com -d example.com
+
+
