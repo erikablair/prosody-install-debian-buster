@@ -3,8 +3,8 @@ Working prosody.cfg.lua with the exception of SRV record -- Debian Buster
 
 
 *Be sure to take note of all ports listed in prosody.cfg.lua!  They will have to be allowed by your firewall and forwarded on your router.*
-*tcp Ports*
-* 80, 443, 3478, 5222, 5269, 5281, 5349, 5280, 5281 
+* *tcp ports-*
+    * *80, 443, 3478, 5222, 5269, 5281, 5349, 5280, 5281* 
 
 ### Add prosody repo to apt list, download authentication key, & install prosody
 * This is just one way to accomplish this
