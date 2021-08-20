@@ -36,13 +36,13 @@ Working prosody.cfg.lua with the exception of SRV record -- Debian Buster
 
 ### Add additional prosody modules
 * Download prosody community modules to a suitable directory
-    * `hg clone https://hg.prosody.im/prosody-modules/prosody-modules`
+    * `sudo hg clone https://hg.prosody.im/prosody-modules/prosody-modules`
 
 * Make a new directory (you may have to login as root depending on permissions)
-    * `mkdir /usr/local/lib/prosody/modules-enabled`
+    * `sudo mkdir /usr/local/lib/prosody/modules-enabled`
 
 * Copy mod_mam folder to moduled-enabled dir
-    * `cp /usr/lib/prosody/modules /usr/local/lib/prosody/modules-enabled`
+    * `sudo cp /usr/lib/prosody/modules /usr/local/lib/prosody/modules-enabled`
 
 * Useful community mods to copy to modules-enabled dir
     * mod_adhoc_groups.lua
