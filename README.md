@@ -53,11 +53,9 @@ Working prosody.cfg.lua with the exception of SRV record -- Debian Buster
     * mod_external_services.lua
     * mod_http_altconnect.lua
     * mod_http.lua
-    * mod_http_upload_external.lua
     * mod_mam_adhoc.lua
     * mod_mam_muc.lua
     * mod_omemo_all_access.lua
-    * mod_require_otr.lua
     * mod_smacks.lua
     * mod_turncredentials.lua
     * mod_vcard_muc.lua
