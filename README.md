@@ -13,7 +13,7 @@ different tutorials *(written and video)*,
 client *(babble.im)* error *helpers*, and good old fashioned trial and error. 
  There are assuredly errors and redundancies in the config files but, it seems 
  like all services are working.  Encrypted messaging, group messaging, and
- file sharing are working including android to android audio and video calls.  
+ file sharing are working including android to android audio and video calls. 
  I will add to this as I continue configuration testing to hopefully eliminate 
  errors and redundancies.<br></br>
 You will first have to setup *(at minimum)* an "A" record with a 
