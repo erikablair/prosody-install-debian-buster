@@ -9,8 +9,8 @@
 I have no idea what I'm doing!  Only six months in to daily driving linux 
 and only have about a month in with debian.  I am not a dev and this is 
 probably all the wrong way of doing things but I couldn't find it all in one 
-place. So here's my attempt at it; for my own archive and hopefully it can help
-someone.    
+place. So here's my attempt at it; for my own archive and maybe it can help
+someone.  *so you know at your own risk*    
  
 That said, this was strung together through several different tutorials 
 *(written and video)*, [prosody.im](https://prosody.im/doc) documentation, 
