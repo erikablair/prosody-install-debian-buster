@@ -68,7 +68,7 @@ appropriate locations...
         
          
 To the best of my knowledge; this secret needs to match in two places in 
-prosody.cfg.lua at lines 135 `turncredentials_secret =` and 151 
+`prosody.cfg.lua` at lines 135 `turncredentials_secret =` and 151 
 `external_service_secret =`     
 
 ### Add additional prosody modules
