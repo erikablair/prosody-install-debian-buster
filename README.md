@@ -167,5 +167,5 @@ needing to enable anything and I did many restarts but, just in case...
 
 
 You may need to restart or reload as well...
-    * `sudo systemctl restart foo`
-    * `sudo systemctl reload foo`
+* `sudo systemctl restart foo`
+* `sudo systemctl reload foo`
