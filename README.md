@@ -10,7 +10,7 @@ video calls.  I will continue to add to this as I become more familiar with pros
 You will first have to setup *(at minimum)* an "A" record with a [DNS provider.](https://freedns.afraid.org/freedns.afraid.org)  Open prosody.cfg.lua and prosody.conf; and replace all *example.com* with your chosen DNS.  This is easily accomplished with substitution in vim...   
 * `:%s/example.com/yourDNShere.com`  then;   
 * `:wq` to save and quit.   
-*After you have installed Prosody and Nginx copy prosody.cfg.lua and prosody.conf to the
+After you have installed Prosody and Nginx copy prosody.cfg.lua and prosody.conf to the
 appropriate locations...   
 * `cp prosody.cfg.lua /etc/prosody/`   
 * `cp prosody.conf /etc/nginx/conf.d/`
