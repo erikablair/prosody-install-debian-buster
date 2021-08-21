@@ -110,8 +110,8 @@ prosody.cfg.lua at lines...
 
 * Copy mod_mam folder to moduled-enabled dir *(I had issues with this and 
 solved it by copying mod_mam to a new defined directory)*
-    * `sudo cp -r /usr/lib/prosody/modules/mod_mam /usr/local/lib/prosody/
-    modules-enabled/`
+    * `sudo cp -r /usr/lib/prosody/modules/mod_mam 
+    /usr/local/lib/prosody/modules-enabled/`
 
 * Useful community mods to copy to modules-enabled dir
     * mod_adhoc_groups.lua
