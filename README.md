@@ -9,14 +9,22 @@ I have no idea what I'm doing!  This was strung together through several
 different tutorials *(written and video)*, the prosody.im documentation, error 
 logs, client *(babble.im)* error *helpers*, and good old fashioned trial and error. 
  There are assuredly errors in config file but, it seems like all services are working.  Encrypted messaging, group messaging, and file sharing are working and android to android audio and video calls.  I will continue to add to this as I become more familiar with prosody.<br></br>
-You will first have to setup *(at minimum)* an "A" record with a [DNS provider.](https://freedns.afraid.org/freedns.afraid.org)  Open prosody.cfg.lua and prosody.conf; and replace all *example.com* with your chosen DNS.  This is easily accomplished with substitution in vim...   
+You will first have to setup *(at minimum)* an "A" record with a [DNS provider.](https://freedns.afraid.org/freedns.afraid.org)   
+Make a new directory in your home folder to clone this repo to...     
+
+* `mkdir ~/.tmp`     
+* `cd ~/.tmp`     
+* `git clone https://github.com/erikablair/prosody-install-debian-buster.git`     
+* `cd prosody-install-debian-buster`     
+
+Open prosody.cfg.lua and prosody.conf; and replace all *example.com* with your chosen DNS.  This is easily accomplished with substitution in vim...   
 * `:%s/example.com/yourDNShere.com`  then;   
 * `:wq` to save and quit.        
 
 After you have installed Prosody and Nginx copy prosody.cfg.lua and prosody.conf to the
 appropriate locations...   
-* `sudo cp prosody.cfg.lua /etc/prosody/`   
-* `sudo cp prosody.conf /etc/nginx/conf.d/`
+* `sudo cp ~/.tmp/prosody.cfg.lua /etc/prosody/`   
+* `sudo cp ~/.tmp/prosody.conf /etc/nginx/conf.d/`
 
 *Be sure to take note of all ports listed in prosody.cfg.lua!  They will have to be allowed by your firewall and forwarded on your router.*
 * *tcp ports-*
@@ -42,10 +50,11 @@ appropriate locations...
 * Create a backup prosody.cfg.lua that shipped with the debian prosody package *(just in case)*
     * `sudo cp /etc/prosody/prosody.cfg.lua /etc/prosody/prosody.cfg.lua.bak`
 * Copy new config to appropriate location
-    * `sudo cp /path/to/downloaded/prosody.cfg.lua /etc/prosody/prosody.cfg.lua`   
+    * `sudo cp ~/.tmp/prosody.cfg.lua /etc/prosody/prosody.cfg.lua`   
 
 ### Nginx configuration
 * Copy prosody.conf file to `/etc/nginx/conf.d/`
+    * `sudo cp ~/.tmp/prosody.conf /etc/nginx/conf.d/`     
 
 ### Set up Turn Server for Discoverability
 * Install co-Turn
