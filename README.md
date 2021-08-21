@@ -36,6 +36,10 @@ appropriate locations...
     * `sudo apt update`
 * Install prosody
     * `sudo apt install prosody`
+* Create a backup prosody.cfg.lua that shipped with the debian prosody package *(just in case)*
+    * `sudo cp /etc/prosody/prosody.cfg.lua /etc/prosody/prosody.cfg.lua.bak`
+* Copy new config to appropriate location
+    * `sudo cp /path/to/downloaded/prosody.cfg.lua /etc/prosody/prosody.cfg.lua`   
 
 ### Nginx configuration
 * Copy prosody.conf file to `/etc/nginx/conf.d/`
