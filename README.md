@@ -23,6 +23,7 @@ client *(babble.im)* error *helpers*, and good old fashioned trial and error.
  file sharing are working including android to android audio and video calls. 
  I will add to this as I continue configuration testing to hopefully eliminate 
  errors and redundancies.<br></br>
+### Pre-requisites
 You will first have to setup *(at minimum)* an "A" record with a 
 [DNS provider.](https://freedns.afraid.org/freedns.afraid.org)  
 * *There are many tutorials on how to create a cron job to 
@@ -46,7 +47,7 @@ later.
 * `admins = { "user@example.com" }` 
 
 After you have installed Prosody and Nginx copy prosody.cfg.lua and 
-prosody.conf to the appropriate locations...   
+prosody.conf to the appropriate locations...  *(this is done in later steps)* 
 * `sudo cp ~/.tmp/prosody.cfg.lua /etc/prosody/`   
 * `sudo cp ~/.tmp/prosody.conf /etc/nginx/conf.d/`
 
