@@ -15,8 +15,8 @@ logs, client *(babble.im)* error *helpers*, and good old fashioned trial and err
  redundancies.<br></br>
 You will first have to setup *(at minimum)* an "A" record with a [DNS provider.](https://freedns.afraid.org/freedns.afraid.org)  
  
-* <sub><em>There are many tutorials on how to create a cron job to 
-keep your ip address associated with your DNS provider</em></sub>   
+* <font size="-1"><em>There are many tutorials on how to create a cron job to 
+keep your ip address associated with your DNS provider</em></font>   
 
  
 Make a new directory in your home folder to clone this repo to...     
