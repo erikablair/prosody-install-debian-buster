@@ -1,6 +1,7 @@
 # prosody_cfg_buster
 Working prosody.cfg.lua with the exception of SRV record -- Debian Buster  
-<div align="center"> <b>! ! DISCLAIMER ! !</b> </div>   
+<div align="center"> <b>! ! DISCLAIMER ! !</b> </div>     
+   
 I have no idea what I'm doing!  This was strung together through several 
 different tutorials *(written and video)*, the prosody.im documentation, error 
 logs, and client *(babble.im)* error *helpers*.  There are assuredly errors in 
