@@ -7,7 +7,7 @@
    
 I have no idea what I'm doing!  This was strung together through several 
 different tutorials *(written and video)*, [prosody.im](https://prosody.im/) 
-documentation, [XMPP Compliance Tester](https://compliance.conversations.im/add/) 
+documentation, [XMPP Compliance Tester](https://compliance.conversations.im/add/), 
 error logs, client *(babble.im)* error *helpers*, and good old fashioned trial and error. 
  There are assuredly errors and redundancies in the config files but, it seems like all 
  services are working.  Encrypted messaging, group messaging, and file sharing are working
