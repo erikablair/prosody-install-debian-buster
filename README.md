@@ -15,8 +15,8 @@ You will first have to setup *(at minimum)* an "A" record with a [DNS provider.]
 
 After you have installed Prosody and Nginx copy prosody.cfg.lua and prosody.conf to the
 appropriate locations...   
-* `cp prosody.cfg.lua /etc/prosody/`   
-* `cp prosody.conf /etc/nginx/conf.d/`
+* `sudo cp prosody.cfg.lua /etc/prosody/`   
+* `sudo cp prosody.conf /etc/nginx/conf.d/`
 
 *Be sure to take note of all ports listed in prosody.cfg.lua!  They will have to be allowed by your firewall and forwarded on your router.*
 * *tcp ports-*
