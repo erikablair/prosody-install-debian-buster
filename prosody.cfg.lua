@@ -93,7 +93,7 @@ modules_enabled = {
 
     -- Other specific functionality
         --"posix"; -- POSIX functionality, sends server to background, enables syslog, etc.
-	    "watchregistrations"; -- Alert admins of registrations
+	"watchregistrations"; -- Alert admins of registrations
         "limits"; -- Enable bandwidth limiting for XMPP connections
         "groups"; -- Shared roster support
         --"server_contact_info"; -- Publish contact information for this service
@@ -103,15 +103,15 @@ modules_enabled = {
         --"motd"; -- Send a message to users when they log in
         "legacyauth"; -- Legacy authentication. Only used by some old clients and bots.
         "proxy65"; -- Enables a file transfer proxy service which clients behind NAT can use
-	    "smacks"; -- Enables Stream Management
-	    "cloud_notify"; -- Push notifications
-	    "bookmarks"; -- Room bookmarks
-	    "http_upload"; -- file sharing
-	    "http_altconnect"; -- Turn & Stun Service
-	    --"http"; -- http server
-	    --"http_upload_external"; -- For larger file sharing
-	    "external_services"; -- Turn & Stun Service
-	    "turncredentials"; -- Turn & Stun credentials
+	"smacks"; -- Enables Stream Management
+	"cloud_notify"; -- Push notifications
+	"bookmarks"; -- Room bookmarks
+	"http_upload"; -- file sharing
+	"http_altconnect"; -- Turn & Stun Service
+	--"http"; -- http server
+	--"http_upload_external"; -- For larger file sharing
+	"external_services"; -- Turn & Stun Service
+	"turncredentials"; -- Turn & Stun credentials
 }
 
 -- File sharing config
@@ -152,25 +152,25 @@ external_service_secret = "supersecret";
 external_services = {
      {
         type = "stun",
-	    transport = "tcp",
-	    host = "example.com",
-	    port = 3478,
+	transport = "tcp",
+	host = "example.com",
+	port = 3478,
      }, {
         type = "turn",
-	    transport = "tcp",
-	    host = "example.com",
-	    port = 3478,
-	    secret = true,
-	    ttl = 86400,
-	    algorithm = "turn",
+	transport = "tcp",
+	host = "example.com",
+	port = 3478,
+	secret = true,
+	ttl = 86400,
+	algorithm = "turn",
      }, {
         type = "turns",
-	    host = "example.com",
+	host = "example.com",
         port = 5349,
-	    transport = "tcp",
-	    secret = true,
-	    ttl = 86400,
-	    algorithm = "turn",
+	transport = "tcp",
+	secret = true,
+	ttl = 86400,
+	algorithm = "turn",
      }
 };
 
