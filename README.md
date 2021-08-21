@@ -8,7 +8,7 @@
 I have no idea what I'm doing!  This was strung together through several 
 different tutorials *(written and video)*, the prosody.im documentation, error 
 logs, client *(babble.im)* error *helpers*, and good old fashioned trial and error. 
- There are assuredly errors in config file but, it seems like all services are working.  Encrypted messaging, group messaging, and file sharing are working and android to android audio and video calls.  I will continue to add to this as I become more familiar with prosody.<br></br>
+ There are assuredly errors and redundancies in the config files but, it seems like all services are working.  Encrypted messaging, group messaging, and file sharing are working and android to android audio and video calls.  I will continue to add to this as I become more familiar with prosody.<br></br>
 You will first have to setup *(at minimum)* an "A" record with a [DNS provider.](https://freedns.afraid.org/freedns.afraid.org)   
 Make a new directory in your home folder to clone this repo to...     
 
