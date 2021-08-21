@@ -7,12 +7,13 @@ logs, and client *(babble.im)* error *helpers*.  There are assuredly errors in
 config file but, it seems like all services are working.  Encrypted messaging, 
 group messaging, and file sharing are working and android to android audio and 
 video calls.  I will continue to add to this as I become more familiar with prosody.<br></br>
-You will first have to setup *(at minimum)* an "A" record with a [DNS provider.](freedns.afraid.org)  Then you will need to open prosody.cfg.lua and replace all *example.com* with 
-your chosen DNS.  This is easily accomplished with substition in vim...   
-`:%set/example.com/yourDNShere.com`  then;   
-`:wq` to save and quit.
-
- 
+You will first have to setup *(at minimum)* an "A" record with a [DNS provider.](freedns.afraid.org)  You will need to open prosody.cfg.lua and prosody.conf, then replace all *example.com* with your chosen DNS.  This is easily accomplished with substitution in vim...   
+`:%s/example.com/yourDNShere.com`  then;   
+`:wq` to save and quit.   
+After you have installed Prosody and Nginx copy prosody.cfg.lua and prosody.conf to the
+appropriate locations...   
+`cp prosody.cfg.lua /etc/prosody/`   
+`cp prosody.conf /etc/nginx/conf.d`
 
 *Be sure to take note of all ports listed in prosody.cfg.lua!  They will have to be allowed by your firewall and forwarded on your router.*
 * *tcp ports-*
