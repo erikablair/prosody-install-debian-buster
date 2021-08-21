@@ -7,7 +7,7 @@ logs, and client *(babble.im)* error *helpers*.  There are assuredly errors in
 config file but, it seems like all services are working.  Encrypted messaging, 
 group messaging, and file sharing are working and android to android audio and 
 video calls.  I will continue to add to this as I become more familiar with prosody.<br></br>
-You will first have to setup *(at minimum)* an "A" record with a [DNS provider.](freedns.afraid.org)  You will need to open prosody.cfg.lua and prosody.conf, then replace all *example.com* with your chosen DNS.  This is easily accomplished with substitution in vim...   
+You will first have to setup *(at minimum)* an "A" record with a [DNS provider.](freedns.afraid.org)  Open prosody.cfg.lua and prosody.conf; and replace all *example.com* with your chosen DNS.  This is easily accomplished with substitution in vim...   
 `:%s/example.com/yourDNShere.com`  then;   
 `:wq` to save and quit.   
 After you have installed Prosody and Nginx copy prosody.cfg.lua and prosody.conf to the
@@ -19,6 +19,14 @@ appropriate locations...
 * *tcp ports-*
     * *80, 443, 3478, 5222, 5269, 5281, 5349, 5280, 5281* 
 
+### Dependencies
+* `sudo apt install luarocks lua5.2 lua-zlib lua-socket lua-sec
+ lua-ldap lua-filesystem lua-expat lua-event lua-dbi-sqlite3
+ lua-dbi-postgresql lua-lib-mysql lua-dbi-common lua-bitop
+ lua-bit32 mercurial nginx-full`
+
+* `luarocks install luaunbound`
+
 ### Add prosody repo to apt list, download authentication key, & install prosody
 * This is just one way to accomplish this
     * `sudo apt-add-repository deb https://packages.prosody.im/debian buster main`
@@ -28,14 +36,6 @@ appropriate locations...
     * `sudo apt update`
 * Install prosody
     * `sudo apt install prosody`
-
-### Dependencies
-* `sudo apt install luarocks lua5.2 lua-zlib lua-socket lua-sec
- lua-ldap lua-filesystem lua-expat lua-event lua-dbi-sqlite3
- lua-dbi-postgresql lua-lib-mysql lua-dbi-common lua-bitop
- lua-bit32 mercurial nginx-full`
-
-* `luarocks install luaunbound`
 
 ### Nginx configuration
 * Copy prosody.conf file to `/etc/nginx/conf.d/`
