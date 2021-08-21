@@ -38,7 +38,7 @@ appropriate locations...
 
 * `luarocks install luaunbound`
 
-### Add prosody repo to apt list, download authentication key, & install prosody
+### Add prosody repo to apt sources list, download authentication key, & install prosody
 * This is just one way to accomplish this
     * `sudo apt-add-repository deb https://packages.prosody.im/debian buster main`
 * Add Prosody key file
