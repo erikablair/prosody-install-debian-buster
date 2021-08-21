@@ -15,7 +15,7 @@ logs, client *(babble.im)* error *helpers*, and good old fashioned trial and err
  redundancies.<br></br>
 You will first have to setup *(at minimum)* an "A" record with a [DNS provider.](https://freedns.afraid.org/freedns.afraid.org)  
  
-* <font size="-5"><em>There are many tutorials on how to create a cron job to 
+* <font size="-15"><em>There are many tutorials on how to create a cron job to 
 keep your ip address associated with your DNS provider</em></font>   
 
  
