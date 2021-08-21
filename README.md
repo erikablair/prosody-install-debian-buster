@@ -64,7 +64,7 @@ appropriate locations...
 * Install co-Turn
     * `sudo apt install coturn`
 
-* Edit coturn config file located at /etc/turnserver.conf
+* Edit coturn config file located at `/etc/turnserver.conf`
     * search for "realm", uncomment, and add the following lines
         * realm=turn.example.com
         * use-auth-secret
