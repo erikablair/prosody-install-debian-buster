@@ -1,20 +1,23 @@
 <div align="center"><h1> prosody-install-debian-buster</h1></div>     
 
-<div align="center">Working prosody.cfg.lua with the exception of SRV record -- Debian Buster</div><br>      
+<div align="center">Working prosody.cfg.lua with the exception of SRV record 
+-- Debian Buster</div><br>      
           
 
 <div align="center"> <b>! ! DISCLAIMER ! !</b> </div>     
    
 I have no idea what I'm doing!  This was strung together through several 
-different tutorials *(written and video)*, [prosody.im](https://prosody.im/doc) 
-documentation, [XMPP Compliance Tester](https://compliance.conversations.im/add/), 
-error logs, client *(babble.im)* error *helpers*, and good old fashioned trial and error. 
- There are assuredly errors and redundancies in the config files but, it seems like all 
- services are working.  Encrypted messaging, group messaging, and file sharing are working
- including android to android audio and video calls.  I will add to this as 
- I continue configuration testing to hopefully eliminate errors and 
- redundancies.<br></br>
-You will first have to setup *(at minimum)* an "A" record with a [DNS provider.](https://freedns.afraid.org/freedns.afraid.org)  
+different tutorials *(written and video)*, 
+[prosody.im](https://prosody.im/doc) documentation, 
+[XMPP Compliance Tester](https://compliance.conversations.im/add/), error logs, 
+client *(babble.im)* error *helpers*, and good old fashioned trial and error. 
+ There are assuredly errors and redundancies in the config files but, it seems 
+ like all services are working.  Encrypted messaging, group messaging, and
+ file sharing are working including android to android audio and video calls.  
+ I will add to this as I continue configuration testing to hopefully eliminate 
+ errors and redundancies.<br></br>
+You will first have to setup *(at minimum)* an "A" record with a 
+[DNS provider.](https://freedns.afraid.org/freedns.afraid.org)  
 * *There are many tutorials on how to create a cron job to 
 keep your ip address associated with your DNS provider.*   
 
@@ -26,16 +29,22 @@ Make a new directory in your home folder to clone this repo to...
 * `git clone https://github.com/erikablair/prosody-install-debian-buster.git`     
 * `cd prosody-install-debian-buster`     
 
-Open prosody.cfg.lua and prosody.conf; and replace all *example.com* with your chosen DNS.  This is easily accomplished with substitution in vim...   
+Open prosody.cfg.lua and prosody.conf; and replace all *example.com* with your 
+chosen DNS.  This is easily accomplished with substitution in vim...   
 * `:%s/example.com/yourDNShere.com`  then;   
-* `:wq` to save and quit.        
+* `:wq` to save and quit.       
 
-After you have installed Prosody and Nginx copy prosody.cfg.lua and prosody.conf to the
-appropriate locations...   
+You will want to add yourself as an admin at line 44 of `prosody.cfg.lua`; you
+will create this user later.
+* `admins = { "user@example.com" }` 
+
+After you have installed Prosody and Nginx copy prosody.cfg.lua and 
+prosody.conf to the appropriate locations...   
 * `sudo cp ~/.tmp/prosody.cfg.lua /etc/prosody/`   
 * `sudo cp ~/.tmp/prosody.conf /etc/nginx/conf.d/`
 
-*Be sure to take note of all ports listed in prosody.cfg.lua!  They will have to be allowed by your firewall and forwarded on your router.*
+*Be sure to take note of all ports listed in prosody.cfg.lua!  They will have 
+to be allowed by your firewall and forwarded on your router.*
 * *tcp ports-*
     * *80, 443, 3478, 5222, 5269, 5281, 5349, 5280, 5281* 
 
@@ -49,14 +58,17 @@ appropriate locations...
 
 ### Add prosody repo to apt sources list, download authentication key, & install prosody
 * This is just one way to accomplish this
-    * `sudo apt-add-repository deb https://packages.prosody.im/debian buster main`
+    * `sudo apt-add-repository deb https://packages.prosody.im/debian buster 
+    main`
 * Add Prosody key file
-    * `wget https://prosody.im/files/prosody-debian-packages.key -O- | sudo apt-key add -`
+    * `wget https://prosody.im/files/prosody-debian-packages.key -O- | sudo 
+    apt-key add -`
 * Update apt to synchronize new repositories
     * `sudo apt update`
 * Install prosody
     * `sudo apt install prosody`
-* Create a backup prosody.cfg.lua that shipped with the debian prosody package *(just in case)*
+* Create a backup prosody.cfg.lua that shipped with the debian prosody package 
+*(just in case)*
     * `sudo cp /etc/prosody/prosody.cfg.lua /etc/prosody/prosody.cfg.lua.bak`
 * Copy new config to appropriate location
     * `sudo cp ~/.tmp/prosody.cfg.lua /etc/prosody/prosody.cfg.lua`   
@@ -124,7 +136,8 @@ prosody.cfg.lua at lines 135 `turncredentials_secret =` and 151
 * Reload nginx
     * `sudo systemctl reload nginx`
 * Generate TLS certificate
-    * `sudo certbot --nginx --agree-tos --redirect --hsts --staple-ocsp --email you@example.com -d example.com`
+    * `sudo certbot --nginx --agree-tos --redirect --hsts --staple-ocsp 
+    --email you@example.com -d example.com`
 * Test certificate renewal
     * `sudo certbot renew --dry-run`  
      
