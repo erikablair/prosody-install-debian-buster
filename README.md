@@ -13,7 +13,8 @@ logs, client *(babble.im)* error *helpers*, and good old fashioned trial and err
  including android to android audio and video calls.  I will add to this as 
  I continue configuration testing to hopefully eliminate errors and 
  redundancies.<br></br>
-You will first have to setup *(at minimum)* an "A" record with a [DNS provider.](https://freedns.afraid.org/freedns.afraid.org)   
+You will first have to setup *(at minimum)* an "A" record with a [DNS provider.](https://freedns.afraid.org/freedns.afraid.org)  
+ 
 *There are many tutorials on how to create a cron job to keep your ip address
 associated with your DNS provider*   
  
