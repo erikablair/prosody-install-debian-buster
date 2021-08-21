@@ -64,7 +64,9 @@ appropriate locations...
     * search for "realm", uncomment, and add the following lines
         * realm=turn.example.com
         * use-auth-secret
-        * static-auth-secret=supersecretpassword     
+        * static-auth-secret=supersecretpassword    
+        
+         
 To the best of my knowledge; this secret needs to match in two places in  
 > prosody.cfg.lua     
 
