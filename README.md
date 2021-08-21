@@ -1,5 +1,5 @@
 # prosody_cfg_buster
-Working prosody.cfg.lua with the exception of SRV record -- Debian Buster  
+Working prosody.cfg.lua with the exception of SRV record -- Debian Buster<br></br>
 **! ! DISCLAIMER ! !**   
 I have no idea what I'm doing!  This was strung together through several 
 different tutorials *(written and video)*, the prosody.im documentation, error 
