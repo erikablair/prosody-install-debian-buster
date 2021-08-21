@@ -34,8 +34,8 @@ chosen DNS.  This is easily accomplished with substitution in vim...
 * `:%s/example.com/yourDNShere.com`  then;   
 * `:wq` to save and quit.       
 
-You will want to add yourself as an admin at line 44 of `prosody.cfg.lua`; you
-will create this user later.
+Setup an admin user at line 44 of `prosody.cfg.lua`; this user will be created 
+later.
 * `admins = { "user@example.com" }` 
 
 After you have installed Prosody and Nginx copy prosody.cfg.lua and 
@@ -145,4 +145,27 @@ Certbot creates a cron job for auto-renewal at `/etc/cron.d/certbot`
 * Automate certificate renewal *(How I did it - may need to be root)*
     * `touch /var/spool/cron/crontabs/root`
     * `cat /etc/cron.d/certbot >> /var/spool/cron/crontabs/root`
+### Finally
+*  Create a user with `prosodyctl`
+    * `sudo prosodyctl adduser user@example.com`    
 
+
+It seems like Debian starts and enables services at install.  I do not remember
+needing to enable anything and I did many restarts but, just in case...
+* Start and enable Nginx
+    * `sudo systemctl start nginx`
+    * `sudo systemctl enable nginx`
+    * `sudo systemctl status nginx`
+* Start and enable Prosody
+    * `sudo systemctl start prosody`
+    * `sudo systemctl enable prosody`
+    * `sudo systemctl status prosody`
+* Start and enable co-Turn
+    * `sudo systemctl start coturn`
+    * `sudo systemctl enable coturn`
+    * `sudo systemctl status coturn`    
+
+
+You may need to restart or reload as well...
+    * `sudo systemctl restart foo`
+    * `sudo systemctl reload foo`
