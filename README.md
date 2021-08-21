@@ -127,7 +127,7 @@ prosody.cfg.lua at lines 135 `turncredentials_secret =` and 151
 * Test certificate renewal
     * `sudo certbot renew --dry-run`   
 Certbot creates a cron job at `/etc/cron.d/certbot`
-* Automate certificate renewal *(How I did it)*
+* Automate certificate renewal *(How I did it - may need to be root)*
     * `touch /var/spool/cron/crontabs/root`
     * `cat /etc/cron.d/certbot >> /var/spool/cron/crontabs/root`
 
