@@ -122,7 +122,12 @@ prosody.cfg.lua at lines 135 `turncredentials_secret =` and 151
     * `sudo chown www-data:www-data /var/www/prosody -R`
 * Reload nginx
     * `sudo systemctl reload nginx`
-* Generate TLS certificte
+* Generate TLS certificate
     * `sudo certbot --nginx --agree-tos --redirect --hsts --staple-ocsp --email you@example.com -d example.com`
-
+* Test certificate renewal
+    * `sudo certbot renew --dry-run`   
+Certbot creates a cron job at `/etc/cron.d/certbot`
+* Automate certificate renewal *(How I did it)*
+    * `touch /var/spool/cron/crontabs/root`
+    * `cat /etc/cron.d/certbot >> /var/spool/cron/crontabs/root`
 
