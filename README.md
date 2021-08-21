@@ -1,6 +1,7 @@
 <div align="center"><h1> prosody-install-debian-buster</h1></div>     
 
-<div align="center">Working prosody.cfg.lua with the exception of SRV record -- Debian Buster</div><br></br>          
+<div align="center">Working prosody.cfg.lua with the exception of SRV record -- Debian Buster</div><br>      
+          
 
 <div align="center"> <b>! ! DISCLAIMER ! !</b> </div>     
    
