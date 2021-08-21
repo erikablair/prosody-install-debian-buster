@@ -66,7 +66,8 @@ appropriate locations...
         * use-auth-secret
         * static-auth-secret=supersecretpassword     
 To the best of my knowledge; this secret needs to match in two places in  
-> prosody.cfg.lua checking          
+> prosody.cfg.lua checking    
+ 
 at lines 135 
 ### Add additional prosody modules
 * Download prosody community modules to a suitable directory
