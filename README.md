@@ -27,9 +27,12 @@ video calls.  I will continue to add to this as I become more familiar with pros
 * `sudo apt install luarocks lua5.2 lua-zlib lua-socket lua-sec
  lua-ldap lua-filesystem lua-expat lua-event lua-dbi-sqlite3
  lua-dbi-postgresql lua-lib-mysql lua-dbi-common lua-bitop
- lua-bit32 mercurial`
+ lua-bit32 mercurial nginx-full`
 
 * `luarocks install luaunbound`
+
+### Nginx configuration
+* Copy prosody.conf file to `/etc/nginx/conf.d/`
 
 ### Set up Turn Server for Discoverability
 * Install co-Turn
