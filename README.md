@@ -47,7 +47,7 @@ later.
 * `admins = { "user@example.com" }` 
 
 After you have installed Prosody and Nginx copy prosody.cfg.lua and 
-prosody.conf to the appropriate locations...  *(this is done in later steps)* 
+prosody.conf to the appropriate locations...  *(foreshadowing)* 
 * `sudo cp ~/.tmp/prosody.cfg.lua /etc/prosody/`   
 * `sudo cp ~/.tmp/prosody.conf /etc/nginx/conf.d/`
 
