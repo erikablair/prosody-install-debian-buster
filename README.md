@@ -1,11 +1,11 @@
 # prosody_cfg_buster
 Working prosody.cfg.lua with the exception of SRV record -- Debian Buster  
 **! ! DISCLAIMER ! !**   
-I have no idea what I'm doing!  This was strung together through several   
-different tutorials *(written and video)*, the prosody.im documentation, error   
-logs, and client *(babble.im)* error *helpers*.  There are assuredly errors in    
-config file but, it seems like all services are working.  Encrypted messaging,  
-group messaging, and file sharing are working and android to android audio and   
+I have no idea what I'm doing!  This was strung together through several  
+different tutorials *(written and video)*, the prosody.im documentation, error  
+logs, and client *(babble.im)* error *helpers*.  There are assuredly errors in  
+config file but, it seems like all services are working.  Encrypted messaging, 
+group messaging, and file sharing are working and android to android audio and  
 video calls.  I will continue to add to this as I become more familiar with prosody.   
  
 
