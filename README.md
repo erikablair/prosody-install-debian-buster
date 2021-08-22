@@ -17,7 +17,7 @@ someone.
  That said, this was strung together through several different tutorials 
 *(written and video)*, [prosody.im](https://prosody.im/doc) documentation, 
 [XMPP Compliance Tester](https://compliance.conversations.im/add/), error logs, 
-client *(babble.im)* error *helpers*, and good old fashioned trial and error. 
+client *(blabber.im)* error *helpers*, and good old fashioned trial and error. 
  There are assuredly errors and redundancies in the config files but, it seems 
  like all services are working.  Encrypted messaging, group messaging, and
  file sharing are working including android to android audio and video calls. 
