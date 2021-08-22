@@ -180,4 +180,24 @@ needing to enable anything and I did many restarts but, just in case...
 
 You may need to restart or reload as well...
 * `sudo systemctl restart foo`
-* `sudo systemctl reload foo`
+* `sudo systemctl reload foo`   
+
+###Testing
+
+#####Android
+I have only tested [blabber.im](https://blabber.im) and 
+[Conversations](https://f-droid.org/en/packages/eu.siacs.conversations/), which
+are essentially the same app and work very well, so I didnt go any further.  
+Full service! Encrypted files, messages, and calls.
+#####iOS
+I am not able to make calls on iOS and achieving general compliance with it 
+was quite difficult.  [ChatSecure](https://chatsecure.org/) seems to be the 
+best bet *(though I did not see a call option)* with one bug, it does not show
+files or photos in the chat feed.  You have to tap where the file *should be* 
+and it will then show the file.... 
+[Monal](https://monal.im/) has a call option but it's bugged, it just shows a 
+blank option window.  The private group chat fails with OMEMO encryption and I
+could not manage to create a new account on my server.  Otherwise it's the
+other option.   
+Tested several other iOS apps and had near zero success with them.  Mostly, 
+the inability login to my server.  
