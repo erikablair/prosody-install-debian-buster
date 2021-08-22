@@ -194,7 +194,7 @@ I am not able to make calls on iOS and achieving general compliance with it
 was quite difficult.  [ChatSecure](https://chatsecure.org/) seems to be the 
 best bet *(though I did not see a call option)* with one bug, it does not show
 files or photos in the chat feed.  You have to tap where the file *should be* 
-and it will then show the file.... 
+and it will then show the file....    
 [Monal](https://monal.im/) has a call option but it's bugged, it just shows a 
 blank option window.  The private group chat fails with OMEMO encryption and I
 could not manage to create a new account on my server.  Otherwise it's the
