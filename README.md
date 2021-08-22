@@ -182,14 +182,14 @@ You may need to restart or reload as well...
 * `sudo systemctl restart foo`
 * `sudo systemctl reload foo`   
 
-###Testing
+### Testing
 
-#####Android
+##### Android
 I have only tested [blabber.im](https://blabber.im) and 
 [Conversations](https://f-droid.org/en/packages/eu.siacs.conversations/), which
 are essentially the same app and work very well, so I didnt go any further.  
 Full service! Encrypted files, messages, and calls.
-#####iOS
+##### iOS
 I am not able to make calls on iOS and achieving general compliance with it 
 was quite difficult.  [ChatSecure](https://chatsecure.org/) seems to be the 
 best bet *(though I did not see a call option)* with one bug, it does not show
