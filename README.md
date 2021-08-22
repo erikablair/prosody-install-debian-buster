@@ -191,7 +191,8 @@ are essentially the same app and work very well, so I didnt go any further.
 Full service! Encrypted files, messages, and calls.
 ##### iOS
 I am not able to make calls on iOS and achieving general compliance with it 
-was quite difficult.  [ChatSecure](https://chatsecure.org/) seems to be the 
+was quite difficult.   
+[ChatSecure](https://chatsecure.org/) seems to be the 
 best bet *(though I did not see a call option)* with one bug, it does not show
 files or photos in the chat feed.  You have to tap where the file *should be* 
 and it will then show the file....    
