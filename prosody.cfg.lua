@@ -63,7 +63,8 @@ modules_enabled = {
         "tls"; -- Add support for secure TLS on c2s/s2s connections
         "dialback"; -- s2s dialback support
         "disco"; -- Service discovery
-    	"extdisco"; -- Service discovery EXTERNAL
+	"extdisco"; -- Service discovery EXTERNAL
+	"iq"; -- Core XMPP functionality
 
     -- Not essential, but recommended
         "carbons"; -- Keep multiple clients in sync
@@ -81,6 +82,7 @@ modules_enabled = {
         "register"; -- Allow users to register on this server using a client and change passwords
         "mam"; -- Store messages in an archive and allow users to access it
         "csi_simple"; -- Simple Mobile optimizations
+	"csi"; -- Allows Client to report active/inactive state
 
     -- Admin interfaces
         "admin_adhoc"; -- Allows administration via an XMPP client that supports ad-hoc commands
@@ -91,14 +93,20 @@ modules_enabled = {
         --"websocket"; -- XMPP over WebSockets
         "http_files"; -- Serve static files from a directory over HTTP
 
+    -- PubSub entries - to publish and subscribe
+        "pubsub";
+	"pubsub_feeds";
+	"pubsub_mqtt";
+	"pubsub_text_interface";
+
     -- Other specific functionality
         --"posix"; -- POSIX functionality, sends server to background, enables syslog, etc.
 	"watchregistrations"; -- Alert admins of registrations
         "limits"; -- Enable bandwidth limiting for XMPP connections
         "groups"; -- Shared roster support
         --"server_contact_info"; -- Publish contact information for this service
-        --"announce"; -- Send announcement to all online users
-        --"welcome"; -- Welcome users who register accounts
+        "announce"; -- Send announcement to all online users
+        "welcome"; -- Welcome users who register accounts
         "watchregistrations"; -- Alert admins of registrations
         --"motd"; -- Send a message to users when they log in
         "legacyauth"; -- Legacy authentication. Only used by some old clients and bots.
@@ -112,6 +120,8 @@ modules_enabled = {
 	--"http_upload_external"; -- For larger file sharing
 	"external_services"; -- Turn & Stun Service
 	"turncredentials"; -- Turn & Stun credentials
+	"user_account_management"; -- Enables User password change
+	--"register_ibr"; -- In Band User account creation
 }
 
 -- File sharing config
@@ -119,7 +129,7 @@ modules_enabled = {
 http_files_dir = "/var/www"
 mime_types_file = "/etc/mime.types"
 http_files_cache_max_file_size = "4096"
-http_upload_file_size_limit = "8388608"
+http_upload_file_size_limit = "10000000"
 
 -- Bosh server config
 http_ports = { 5280 }
@@ -131,11 +141,8 @@ https_interfaces = { "*", "::" }
 consider_bosh_secure = true;
 cross_domain_bosh = true;
 
--- Turn & Stun credential config
-turncredentials_secret = "supersecret"
-turncredentials_host = "turn.example.com"
-turncredentials_port = "3478"
-turncredentials_ttl = "86400"
+-- Welcome message
+welcome_message = "Hey $username! Welcome to $host, glad you're here!"
 
 -- Bandwidth limiting config -- rate limits for incoming client and server connections
 limits = {
@@ -147,8 +154,14 @@ limits = {
   };
 }
 
+-- Turn & Stun credential config
+turncredentials_secret = "supersecretpassword"
+turncredentials_host = "turn.example.com"
+turncredentials_port = "3478"
+turncredentials_ttl = "86400"
+
 -- Turn & Stun service discovery config
-external_service_secret = "supersecret";
+external_service_secret = "supersecretpassword";
 external_services = {
      {
         type = "stun",
@@ -321,6 +334,9 @@ modules_enabled = { "muc_mam"; "vcard_muc"; "omemo_all_access"; }
 Component "proxy.example.com" "proxy65"
     proxy65_address = "upload.example.com"
     proxy65_acl  = "example.com"
+   
+-- Broadcast - ServerWide Announcements
+Component "broadcast@example.com" "broadcast"
 
 ---Set up an external component (default component port is 5347)
 --
