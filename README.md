@@ -54,7 +54,7 @@ prosody.conf to the appropriate locations...  *(foreshadowing)*
 *Be sure to take note of all ports listed in prosody.cfg.lua!  They will have 
 to be allowed by your firewall and forwarded on your router.*
 * *tcp ports-*
-    * *80, 443, 3478, 5222, 5269, 5281, 5349, 5280, 5281* 
+    * *80, 443, 3478, 5222, 5269, 5281, 5349, 5280, 5281, 5269* 
 
 ### Dependencies
 * `sudo apt install luarocks lua5.2 lua-zlib lua-socket lua-sec
