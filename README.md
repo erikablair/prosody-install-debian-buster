@@ -22,7 +22,11 @@ client *(blabber.im)* error *helpers*, and good old fashioned trial and error.
  like all services are working.  Encrypted messaging, group messaging, and
  file sharing are working including android to android audio and video calls. 
  I will add to this as I continue configuration testing to hopefully eliminate 
- errors and redundancies.<br></br>
+ errors and redundancies.   
+ *Now with server to server connections and system-wide broadcasting*
+ 
+ 
+ <br></br>
 ### Pre-requisites
 You will first have to setup *(at minimum)* an "A" record with a 
 [DNS provider.](https://freedns.afraid.org/freedns.afraid.org)  
@@ -42,7 +46,7 @@ chosen DNS.  This is easily accomplished with substitution in vim...
 * `:%s/example.com/yourDNShere.com`  then;   
 * `:wq` to save and quit.       
 
-Setup an admin user at line 44 of `prosody.cfg.lua`; this user will be created 
+Setup an admin user in `prosody.cfg.lua`; this user will be created 
 later.
 * `admins = { "user@example.com" }` 
 
@@ -98,8 +102,8 @@ to be allowed by your firewall and forwarded on your router.*
          
 To the best of my knowledge; this secret needs to match in two places in 
 prosody.cfg.lua at lines... 
-* 135 `turncredentials_secret =` and; 
-* 151 `external_service_secret =`     
+* `turncredentials_secret =` and; 
+* `external_service_secret =`     
 
 ### Add additional prosody modules
 * Download prosody community modules to a suitable directory
