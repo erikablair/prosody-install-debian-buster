@@ -23,7 +23,7 @@ client *(blabber.im)* error *helpers*, and good old fashioned trial and error.
  file sharing are working including android to android audio and video calls. 
  I will add to this as I continue configuration testing to hopefully eliminate 
  errors and redundancies.   
- *Now with server to server connections, system-wide broadcasting, and new 
+ *Now with server to server connections, system-wide broadcasting, and a new 
  user welcome message.*
  <br></br>
 ### Pre-requisites
