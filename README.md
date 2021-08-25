@@ -193,8 +193,8 @@ I have only tested [blabber.im](https://blabber.im) and
 are essentially the same app and work very well, so I didnt go any further.  
 Full service! Encrypted files, messages, and calls.
 ##### iOS
-I am not able to make calls on iOS and achieving general compliance with it 
-was quite difficult.   
+Achieving general compliance with iOS was quite difficult.  It seems XMPP
+development across iOS has staled.staled
 [Siskin](https://siskin.im/) is the best iOS app I have tested so far.  It
 seems to have the most functionality; encrypted group messages including
 audio and video calls.
