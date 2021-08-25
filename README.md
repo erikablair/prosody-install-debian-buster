@@ -195,8 +195,11 @@ Full service! Encrypted files, messages, and calls.
 ##### iOS
 I am not able to make calls on iOS and achieving general compliance with it 
 was quite difficult.   
-[ChatSecure](https://chatsecure.org/) seems to be the 
-best bet *(though I did not see a call option)* with one bug, it does not show
+[Siskin](https://siskin.im/) is the best iOS app I have tested so far.  It
+seems to have the most functionality; encrypted group messages including
+audio and video calls.
+[ChatSecure](https://chatsecure.org/) seems to be the a decent option
+*(though I did not see a call option)* with one bug, it does not show
 files or photos in the chat feed.  You have to tap where the file *should be* 
 and it will then show the file....    
 [Monal](https://monal.im/) has a call option but it's bugged, it just shows a 
