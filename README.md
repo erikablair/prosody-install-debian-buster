@@ -194,7 +194,7 @@ are essentially the same app and work very well, so I didnt go any further.
 Full service! Encrypted files, messages, and calls.
 ##### iOS
 Achieving general compliance with iOS was quite difficult.  It seems XMPP
-development across iOS has staled.    
+development across iOS has stalled.    
 
 [Siskin](https://siskin.im/) is the best iOS app I have tested so far.  It
 seems to have the most functionality; encrypted group messages including
