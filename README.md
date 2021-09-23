@@ -83,6 +83,8 @@ to be allowed by your firewall and forwarded on your router.*
     * `sudo cp /etc/prosody/prosody.cfg.lua /etc/prosody/prosody.cfg.lua.bak`
 * Copy new config to appropriate location
     * `sudo cp ~/.tmp/prosody.cfg.lua /etc/prosody/prosody.cfg.lua`   
+* Change ownership of prosody folder
+    * `sudo chown www-data:www-data /var/www/prosody`
 
 ### Nginx configuration
 * Copy prosody.conf file to `/etc/nginx/conf.d/`
@@ -95,12 +97,12 @@ to be allowed by your firewall and forwarded on your router.*
 * Edit coturn config file located at `/etc/turnserver.conf`
     * search for "realm", uncomment, and add the following lines
         * `realm=turn.example.com`
+        * `server-name=turn.exapmle.com`
         * `use-auth-secret`
         * `static-auth-secret=supersecretpassword`    
         * `listening-port=3478`
         * `min-port=10000`
         * `max-port=20000`
-        * `server-name=turn.exapmle.com`
         
          
 To the best of my knowledge; this secret needs to match in two places in 
