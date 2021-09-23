@@ -97,6 +97,10 @@ to be allowed by your firewall and forwarded on your router.*
         * `realm=turn.example.com`
         * `use-auth-secret`
         * `static-auth-secret=supersecretpassword`    
+        * `listening-port=3478`
+        * `min-port=10000`
+        * `max-port=20000`
+        * `server-name=turn.exapmle.com`
         
          
 To the best of my knowledge; this secret needs to match in two places in 
